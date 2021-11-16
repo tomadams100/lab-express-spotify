@@ -8,6 +8,14 @@ const spotifyApi = new SpotifyWebApi({
   clientSecret: process.env.CLIENT_SECRET,
 });
 
+// Retrieve an access token
+spotifyApi
+  .clientCredentialsGrant()
+  .then((data) => spotifyApi.setAccessToken(data.body["access_token"]))
+  .catch((error) =>
+    console.log("Something went wrong when retrieving an access token", error)
+  );
+
 router.get("/", (req, res, next) => {
   res.render("index");
 });
@@ -19,7 +27,7 @@ router.get("/artist-search", (req, res, next) => {
   spotifyApi
     .searchArtists(artist)
     .then((data) => {
-      // console.log('data -> ', data);
+      console.log("data -> ", data);
       const artistsArray = data.body.artists.items;
       res.render("artist-search-results", { artists: artistsArray });
     })
