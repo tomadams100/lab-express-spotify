@@ -230,3 +230,5 @@ To start warming up for the project set up and first steps, let's have an overvi
 | Album Tracks | GET  | /tracks/:albumId | List with all the tracks of an album |
 
 ### Views Overview  Wireframes
+
+![](https://raw.githubusercontent.com/Labs-IHWDFT/lab-express-spotify/solution/public/images/spotifyWireframes.png)
