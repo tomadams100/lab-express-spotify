@@ -125,9 +125,9 @@ lab-express-spotify
       ├── package.json
       ├── package-lock.json
       ├── public
-      │    ├── images
-      │    └── stylesheets
-      │         └── style.css
+      │    ├── images
+      │    └── stylesheets
+      │         └── style.css
       └── views
             └── layout.hbs
 ```
@@ -218,4 +218,15 @@ A track object comes with a `preview_url`, which is the source for a 30-second p
 - Total of five pages with (1)artist / (2)album / (3)track information (all populated from Spotify) + (4)layout + (5)home.
 - Some styling, it doesn't have to look like the example.
 
-Happy Coding! 💙
+## Assigment steps
+To start warming up for the project set up and first steps, let's have an overview of the main routes and views we need for this lab:
+
+### Main Routes
+| Name  | Method | Endpoint |  Description |
+|--|--|--| --|
+| Home | GET  | / | See the main home page with the search bar |
+| Artists | GET  | /artist-search | List with all the artists with the searched name/term |
+| Artist Albums | GET  | /albums/:artistId | List with all the albums of a specific artist |
+| Album Tracks | GET  | /tracks/:albumId | List with all the tracks of an album |
+
+### Views Overview  Wireframes
